@@ -1,0 +1,12 @@
+.app {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-content {
+  margin-left: 217px; /* Sidebar width */
+  margin-top: 48px; /* Height of the header */
+  padding: 20px;
+  width: calc(100% - 217px); /* Adjust the content area width */
+  background-color: #f4f4f4;
+}

@@ -1,0 +1,146 @@
+/* Overview Container */
+.overview-container {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Month Selector */
+.month-selector {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.month-selector label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.month-selector input {
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* Overview Heading */
+h1 {
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Cards Container */
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Decreased gap between cards */
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* Allow cards to wrap if the screen is smaller */
+}
+
+/* Card Styles */
+.card {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  width: 15%; /* Adjusted card width */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card.blue {
+  background-color: #e0f7fa;
+}
+
+.card.grey {
+  background-color: #f1f1f1;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.5rem;
+  color: #00796b;
+  font-weight: bold;
+}
+
+/* Charts Container */
+.charts-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Line Graph Container */
+.line-graph-container {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Pie Chart Container */
+.pie-chart-container {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .cards-container {
+    justify-content: center;
+  }
+
+  .card {
+    width: 30%; /* Adjust card width for tablet */
+  }
+
+  .charts-container {
+    flex-direction: column;
+  }
+
+  .line-graph-container, .pie-chart-container {
+    width: 100%; /* Full width for each chart */
+    margin-bottom: 20px; /* Add margin between charts */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Slightly smaller heading for tablets */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .cards-container {
+    justify-content: center;
+  }
+
+  .card {
+    width: 100%; 
+    margin-bottom: 15px; 
+  }
+
+  .charts-container {
+    flex-direction: column;
+  }
+
+  .line-graph-container, .pie-chart-container {
+    width: 100%; 
+    margin-bottom: 20px; 
+  }
+
+  h1 {
+    font-size: 1.2rem; 
+  }
+}

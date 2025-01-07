@@ -1,0 +1,177 @@
+/* Sidebar */
+.sidebar {
+  width: 217px;
+  height: 100vh; /* Use 100vh for full screen height */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease; /* Smooth transition for width changes */
+}
+
+/* Logo Section */
+.logo-section {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 174px;
+  height: 54px;
+  object-fit: contain;
+}
+
+/* Menu Section */
+.menu-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.nav-options {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px; /* Space after logo */
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21.82px;
+  color: #4B4B4B;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-item:hover {
+  background-color: lightblue;
+  color: #007BFF;
+}
+
+.nav-item.active {
+  background-color: lightblue;
+  color: #007BFF;
+}
+
+.nav-icon {
+  margin-right: 10px;
+  font-size: 20px; /* Size of the icons */
+}
+
+/* Support Section */
+.support-section {
+  width: 150.82px;
+  height: 129.69px;
+  position: absolute;
+  bottom: 30px; /* Adjusted for bottom placement */
+  left: 36.89px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.support-photo {
+  width: 90px; /* Adjusted size */
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px; /* Optional: rounded corners */
+  margin-bottom: 10px;
+}
+
+.support-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.support-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px; /* Reduced width for tablet screens */
+  }
+
+  .logo-section {
+    padding: 15px;
+  }
+
+  .logo {
+    width: 150px; /* Slightly smaller logo on tablets */
+    height: 45px;
+  }
+
+  .nav-item {
+    font-size: 14px; /* Slightly smaller text */
+    padding: 12px 15px; /* Adjust padding for smaller screens */
+  }
+
+  .nav-icon {
+    font-size: 18px; /* Smaller icon size */
+  }
+
+  .support-section {
+    width: 130px; /* Adjust support section size */
+    bottom: 20px; /* Adjust position */
+  }
+
+  .support-photo {
+    width: 80px; /* Adjust photo size */
+    height: 70px;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%; /* Sidebar becomes full width on mobile */
+    height: auto; /* Allow sidebar to expand with content */
+  }
+
+  .logo-section {
+    padding: 10px;
+  }
+
+  .logo {
+    width: 130px; /* Smaller logo on mobile */
+    height: 40px;
+  }
+
+  .nav-item {
+    font-size: 12px; /* Smaller font size for mobile */
+    padding: 10px 12px; /* Reduced padding */
+  }
+
+  .nav-icon {
+    font-size: 16px; /* Smaller icons */
+  }
+
+  .support-section {
+    width: 120px; /* Adjust support section for mobile */
+    bottom: 10px; /* Adjust bottom margin */
+  }
+
+  .support-photo {
+    width: 70px; /* Adjust photo size */
+    height: 60px;
+  }
+}
