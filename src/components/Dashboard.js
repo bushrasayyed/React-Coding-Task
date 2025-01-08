@@ -1,6 +1,5 @@
 import React from "react";
 import OverviewCards from "./Overview";
-import PaymentTable from "./PaymentTable";
 import "./Dashboard.css";
 
 const Dashboard = () => {
@@ -14,7 +13,7 @@ const Dashboard = () => {
         {/* Overview Cards */}
         <OverviewCards />
         {/* Payment Table */}
-        <PaymentTable />
+        {/* <PaymentTable /> */}
       </div>
     </div>
   );

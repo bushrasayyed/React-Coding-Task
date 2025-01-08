@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import LineGraph from './LineChart';  
 import DonutChart from './DonutChart';   
+import PaymentTable from './PaymentTable';
 import data from '../data.json';     
 import './Overview.css'; 
 
@@ -25,8 +26,7 @@ const Overview = () => {
     // Find the matching data entry based on the formatted date
     const newData = data.find(item => item.date === formattedSelectedDate);
     setFilteredData(newData || null);
-  }, [selectedDate]); // Re-run the effect whenever the selected date changes
-
+  }, [selectedDate]); 
   // Card data (only updated based on the selected date)
   const cardData = filteredData ? [
     { label: 'Total Sales', value: filteredData.total_sales },
@@ -49,10 +49,8 @@ const Overview = () => {
         />
       </div>
 
-      {/* Overview Heading */}
       <h1>Overview</h1>
 
-      {/* Cards Display */}
       <div className="cards-container">
         {cardData.length > 0 ? (
           cardData.map((card, index) => (
@@ -84,6 +82,9 @@ const Overview = () => {
           )}
         </div>
       </div>
+    {filteredData && (
+    <PaymentTable data={filteredData.supplier_payments} />
+     )}
     </div>
   );
 };

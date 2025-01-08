@@ -2,7 +2,7 @@ import React from "react";
 import "./PaymentTable.css";
 
 const PaymentTable = ({ data }) => {
-  const rows = data?.table || [];
+  const rows = data || [];
 
   return (
     <div className="payment-table">
@@ -19,16 +19,22 @@ const PaymentTable = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {rows.map((row, index) => (
-            <tr key={index}>
-              <td>{row.recordNo}</td>
-              <td>{row.farmerName}</td>
-              <td>{row.netAmount}</td>
-              <td>{row.paidAmount}</td>
-              <td>{row.dueAmount}</td>
-              <td>{row.paymentStatus}</td>
+          {rows.length > 0 ? (
+            rows.map((row, index) => (
+              <tr key={index}>
+                <td>{row.record_no}</td>
+                <td>{row.farmer_name}</td>
+                <td>{row.net_amount}</td>
+                <td>{row.paid_amount}</td>
+                <td>{row.due_amount}</td>
+                <td>{row.payment_status}</td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="6">No recent payments available</td>
             </tr>
-          ))}
+          )}
         </tbody>
       </table>
     </div>
